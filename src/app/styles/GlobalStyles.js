@@ -16,6 +16,8 @@ export default createGlobalStyle`
   }
   body{
     background-color: var(--primary);
+    font-size: 16px;
+    font-weight: 400;
   }
   :root {
     --primary: #F5F5F5;
