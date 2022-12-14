@@ -9,7 +9,10 @@ const BarChart = ({ chamados }) => {
     <div>
       <Pie
         data={{
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: [
+            'Contas Qtd',
+            'Chm Total',
+          ],
           datasets: [
             {
               label: '# of votes',
@@ -42,16 +45,9 @@ const BarChart = ({ chamados }) => {
               ],
               borderWidth: 1,
             },
-            // {
-            //   label: 'Quantity',
-            //   data: [47, 52, 67, 58, 9, 50],
-            //   backgroundColor: 'orange',
-            //   borderColor: 'red',
-            // },
           ],
         }}
-        height={400}
-        width={450}
+        width={400}
         options={{
           maintainAspectRatio: false,
           scales: {
