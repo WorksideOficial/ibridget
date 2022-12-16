@@ -10,7 +10,7 @@ const Option = ({ search, setSearch, dataClient }) => {
     >
       {dataClient.map((item, index) => {
         return (
-          <option value={item} key={index}>{item}</option>
+          <option key={index}>{item}</option>
         );
       })}
     </Select>

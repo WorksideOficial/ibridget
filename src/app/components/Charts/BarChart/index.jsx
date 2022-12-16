@@ -47,7 +47,7 @@ const BarChart = ({ chamados }) => {
             },
           ],
         }}
-        width={400}
+        width={580}
         options={{
           maintainAspectRatio: false,
           scales: {

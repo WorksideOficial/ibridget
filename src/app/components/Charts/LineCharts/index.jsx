@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 
-const LineCharts = ({ chamados }) => {
+const LineCharts = ({ ocorrencia }) => {
   const options = {
     responsive: true,
     plugins: {
@@ -22,17 +22,13 @@ const LineCharts = ({ chamados }) => {
     labels,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Ocorrências',
         data: [
-          chamados[0].contas_quantidade,
-          chamados[0].chamadas_total,
-          chamados[0].chamadas_falha_operadora,
-          chamados[0].chamadas_telefone_incorreto,
-          chamados[0].chamadas_nao_atendida,
-          chamados[0].chamadas_atendimento_maquina,
-          chamados[0].chamadas_atendimento_humano,
-          chamados[0].chamadas_abandono_pre_fila,
-          chamados[0].chamadas_atendimento_pa,
+          ocorrencia[0].ocorrencias_total,
+          ocorrencia[0].ocorrencias_sem_contato,
+          ocorrencia[0].ocorrencias_com_contato,
+          ocorrencia[0].ocorrencias_abordagem,
+          ocorrencia[0].ocorrencias_fechamento,
         ],
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',

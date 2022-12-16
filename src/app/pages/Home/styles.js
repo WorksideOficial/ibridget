@@ -24,17 +24,12 @@ export const BoxGraphic = styled.div`
 
 export const Box01 = styled.div`
   display: flex;
-  width: 33.3%;
+  width: 50%;
 `;
 
 export const Box02 = styled.div`
   display: flex;
-  width: 33.3%;
-`;
-
-export const Box03 = styled.div`
-  display: flex;
-  width: 33.3%;
+  width: 50%;
 `;
 
 export const BoxTable = styled.div`

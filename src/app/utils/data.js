@@ -25,22 +25,21 @@ const chamados = [
 ];
 
 const TableHeaderContent = [
-  { id: 1, name: "Cliente", },
-  { id: 2, name: "Chamados Total", },
-  { id: 3, name: "Chamados Falha OP", },
-  { id: 4, name: "Chamados Tel Inco", },
-  { id: 5, name: "Chamadas Não Aten", },
-  { id: 6, name: "Chamadas Aten M", },
-  { id: 7, name: "Chamadas Aten H", },
-  { id: 8, name: "Chamadas Aband Fila", },
-  { id: 9, name: "Chamadas Atend Pa", },
-  { id: 10, name: "Ocorrencias Total", },
-  { id: 11, name: "Ocorrencias Sem Cont", },
-  { id: 12, name: "Ocorrencias com Contato", },
-  { id: 13, name: "Ocorrencias Abordagem", },
-  { id: 14, name: "Ocorrencias Fechamento", },
-  { id: 15, name: "Data", },
-  { id: 16, name: "Hora", },
+  { id: 1, name: "Chamados Total", },
+  { id: 2, name: "Chamados Falha OP", },
+  { id: 3, name: "Chamados Tel Inco", },
+  { id: 4, name: "Chamadas Não Aten", },
+  { id: 5, name: "Chamadas Aten M", },
+  { id: 6, name: "Chamadas Aten H", },
+  { id: 7, name: "Chamadas Aband Fila", },
+  { id: 8, name: "Chamadas Atend Pa", },
+  { id: 9, name: "Ocorrencias Total", },
+  { id: 10, name: "Ocorrencias Sem Cont", },
+  { id: 11, name: "Ocorrencias com Contato", },
+  { id: 12, name: "Ocorrencias Abordagem", },
+  { id: 13, name: "Ocorrencias Fechamento", },
+  { id: 14, name: "Data", },
+  { id: 15, name: "Hora", },
 ];
 
 export { ocorrencia, chamados, TableHeaderContent };

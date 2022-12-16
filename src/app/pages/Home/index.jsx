@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import {
   Box01,
   Box02,
-  Box03,
   BoxGraphic,
   BoxTable,
   Container,
   Title
 } from "./styles";
 import BarChart from "../../components/Charts/BarChart";
-import VertBarChart from "../../components/Charts/VertBarChart";
 import { ocorrencia, chamados, TableHeaderContent } from "../../utils/data";
 import Table from "../../components/Table";
 import Data from "../../utils/dados.json";
@@ -19,11 +17,18 @@ import LineCharts from "../../components/Charts/LineCharts";
 
 const Home = () => {
   const [search, setSearch] = useState('');
-  const [allClients, setAllClients] = useState(Data);
-  const dataClient = Data[0].geral.clientes.split(',');
+  const dataClient = Data[1].geral.clientes.split(',');
+
+  const dataResult = Data.filter(({ clientes }) => {
+    return Object.keys(clientes).map((key) => {
+      return console.log(clientes[key].data)
+    });
+  })
+
+  console.log(dataResult)
+
   return (
     <>
-
       <Container>
         <Title>Pesquisa</Title>
         <Option
@@ -34,14 +39,11 @@ const Home = () => {
       </Container>
       <BoxGraphic>
         <Box01>
-          <LineCharts chamados={chamados} />
+          <LineCharts ocorrencia={ocorrencia} />
         </Box01>
         <Box02>
-          <VertBarChart ocorrencia={ocorrencia} />
-        </Box02>
-        <Box03>
           <BarChart chamados={chamados} />
-        </Box03>
+        </Box02>
       </BoxGraphic>
       <BoxTable>
         <Title>Tabela</Title>
@@ -53,12 +55,11 @@ const Home = () => {
         }
           TableBody={
             <>
-              {allClients.map(({ clientes }) => {
+              {Data.map(({ clientes }) => {
                 const table = Object.keys(clientes).map((item, index) => {
                   const convertedDate = new Date(clientes[item].data).toLocaleDateString('pt-BR');
                   return (
                     <tr key={index}>
-                      <td>cliente 01</td>
                       <td>{clientes[item].chamadas_total}</td>
                       <td>{clientes[item].chamadas_falha_operadora}</td>
                       <td>{clientes[item].chamadas_telefone_incorreto}</td>
